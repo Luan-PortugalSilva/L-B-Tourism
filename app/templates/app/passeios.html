@@ -1,0 +1,80 @@
+{% extends "app/base.html" %}
+{% block title %} {{page}} {% endblock %}
+{% load static %}
+{% block content %}
+
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Portfolio Section -->
+    <div class="space">
+        <h2>Passeios</h2>
+    </div>
+    <div class="row">
+        {% if passeios %}
+        {% for passeio in passeios %}
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="{{ passeio.image.url }}"> </a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#"> {{ passeio.title }}</a>
+                    </h4>
+                    <p class="card-text">{{ passeio.content }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/values/{{ passeio.id }}" class="btn btn-primary">Valores</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <br>
+        <div class="cnter">
+            <h3>Não há passeios disponíveis no momento!</h3>
+        </div>
+        <br>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

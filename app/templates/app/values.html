@@ -1,0 +1,43 @@
+{% extends "app/base.html" %}
+{% block title %} {{page}} {% endblock %}
+{% load static %}
+{% block content %}
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3"> {{ tour.title }}
+  </h1>
+
+
+  <div class="row">
+
+    <!-- Post Content Column -->
+    <div class="col-lg-8">
+
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" id="img1" src="{{ tour.image.url }}" alt="">
+
+      <hr>
+      <h2>{{ tour.price }}</h2>
+      <hr>
+
+      <!-- Post Content -->
+      <p>{{ tour.content }}</p>
+
+
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

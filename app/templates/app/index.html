@@ -1,0 +1,41 @@
+{% extends "app/base.html" %}
+{% block title %} {{page}} {% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">
+        <h3>Passeios</h3>
+    </h1>
+
+
+    <!-- Image Header -->
+    <img class="img-fluid rounded mb-4" src="{% static '/img/Folder.jpeg' %}" alt="Capa do site">
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        {% if feed_backs %}
+        {% for feed_back in feed_backs%}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+                <h4 class="card-header">{{ feed_back.title }}</h4>
+                <div class="card-body">
+                    <p class="card-text">{{ feed_back.content }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <br>
+        <div class="cnter">
+            <h3>Não há nenhum feedback recente :)</h3>
+        </div>
+        <br>
+        {% endif %}
+    </div>
+    <!-- /.row -->
+
+</div>
+{% endblock %}

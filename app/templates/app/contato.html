@@ -1,0 +1,87 @@
+{% extends "app/base.html" %}
+{% block title %} {{page}} {% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Fale conosco
+        <small></small>
+    </h1>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+            <!-- Embedded Google Map -->
+            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+            <h3>Detalhes para Contatos</h3>
+            <br>
+            <p>
+                Rua ednelson de souza brasilino 479 Miguel couto
+                <br>Nova Iguaçu - Rj
+                <br>
+            </p>
+            <p>
+                <abbr title="Phone"></abbr>(021) 99169 - 9633
+            </p>
+            <p>
+                <abbr title="Email"></abbr>
+                <a>lbturismo39@gmail.com
+                </a>
+            </p>
+            <p>
+                <abbr title="Hours"></abbr>Segunda - Sexta-feira: 9:00 AM - 5:00 PM
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Contact Form -->
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <h3>Envie a sua pergunta:</h3>
+            <form name="sentMessage" id="contactForm" novalidate>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Nome Completo:</label>
+                        <input type="text" class="form-control" id="name">
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Número de telefone:</label>
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Seu email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Menssagem:</label>
+                        <textarea rows="10" cols="100" class="form-control" id="message" maxlength="999"
+                            style="resize:none"></textarea>
+                    </div>
+                </div>
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+{% endblock %}
