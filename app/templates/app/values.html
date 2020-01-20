@@ -3,41 +3,35 @@
 {% load static %}
 {% block content %}
 
-
 <!-- Page Content -->
 <div class="container">
 
-  <!-- Page Heading/Breadcrumbs -->
-  <h1 class="mt-4 mb-3"> {{ tour.title }}
-  </h1>
+<!-- Page Heading/Breadcrumbs -->
+<h1 class="mt-4 mb-3">
+  <small>Valores</small>
+</h1>
 
-
-  <div class="row">
-
-    <!-- Post Content Column -->
-    <div class="col-lg-8">
-
-      <!-- Preview Image -->
-      <img class="img-fluid rounded" id="img1" src="{{ tour.image.url }}" alt="">
-
-      <hr>
-      <h2>{{ tour.price }}</h2>
-      <hr>
-
-      <!-- Post Content -->
-      <p>{{ tour.content }}</p>
-
-
-
-    </div>
-
+<!-- Project One -->
+<div class="row">
+  <div class="col-md-7">
+    
+      <img class="img-fluid rounded mb-3 mb-md-0" src="{{ tour.image.url }}" alt="">
+    </a>
   </div>
-  <!-- /.row -->
-
+  <div class="col-md-5">
+    <h4> {{ tour.title }} </h4> 
+    <hr>
+    <h5>{{ tour.price }}</h5>
+    <hr>
+    <textarea rows="10" cols="120" class="form-control" id="message" maxlength="999"
+     style="resize:none">{{ tour.content }}</textarea> 
+     <p></p>
+    <a class="btn btn-primary" href="{% url 'app:contato' %}">Compre a sua passagem.
+      
+    </a>
+  </div>
 </div>
-<!-- /.container -->
-
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- /.row -->
+<hr>
+</div>
 {% endblock %}

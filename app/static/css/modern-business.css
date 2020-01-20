@@ -54,17 +54,7 @@ body {
 .mynav a,
 .target {
   transition: all .18s ease-in-out;
-}
-
-#antinav{
-  border: none;
-    background-color: #343a40;
-    color: white;
-    cursor: pointer;
-}
-
-.bg-black {
-  background-color: #343a40;
+  
 }
 
 .bluebtn{
@@ -78,11 +68,3 @@ body {
   border: none;
 }
 
-.footer1 {
-  height: 80px;
-}
-
-.img1 {
-  height: 800px;
-  width: 800px;
-}
