@@ -1,9 +1,8 @@
 .vscode
 .env
-/.Env
 /env
 *pyc
 *.sqlite3
 
 #Lembrar de remover essa linha para produção depois de resolver imagens
-/app/media/galeria
+/app/media
