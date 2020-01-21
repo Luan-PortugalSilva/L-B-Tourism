@@ -68,3 +68,6 @@ body {
   border: none;
 }
 
+.navbar-brand {
+  text-decoration-color: white;
+}
