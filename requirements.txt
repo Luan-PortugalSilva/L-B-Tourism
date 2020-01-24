@@ -1,4 +1,4 @@
-Django==2.2.8
+Django==2.2.9
 django-material-admin==1.6.34
 Pillow==7.0.0
 python-decouple==3.3
